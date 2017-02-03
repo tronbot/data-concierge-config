@@ -27,8 +27,8 @@ security:
 
 eureka:
     instance:
-        appname: HipsterRef
-        instanceId: HipsterRef:${spring.application.instance_id:${random.value}}
+        appname: ${spring.application.name}
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
         statusPageUrlPath: ${management.context-path}/info
         healthCheckUrlPath: ${management.context-path}/health
 ribbon:
