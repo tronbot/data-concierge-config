@@ -1,17 +1,44 @@
-message: Hello Spring One!!!!!!
 server:
-  port: ${PORT:8000}
+    port: ${PORT:8000}
+    
 spring:
-  cloud:
-    stream:
-      bindings:
-        input:
-          destination: data-concierge
-          group: data-concierge-group
-          durableSubscription: true
+    application:
+        name: data-concierge-service
+    profiles:
+        active: dev
+        include: swagger
+    cloud:
+        stream:
+            bindings:
+                input:
+                    destination: data-concierge
+                    group: data-concierge-group
+                    durableSubscription: true
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:h2:file:./target/h2db/db/data-concierge;DB_CLOSE_DELAY=-1
+        username: 
+        password:
+    h2:
+        console:
+            enabled: true
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        database: H2
+        show-sql: true
+        properties:
+            hibernate.id.new_generator_mappings: true
+            hibernate.cache.use_second_level_cache: true
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
+            hibernate.cache.hazelcast.instance_name: HipsterRef
+            hibernate.cache.use_minimal_puts: true
+            hibernate.cache.hazelcast.use_lite_member: true
+            
 google:
-  places:
-    api:
-      url: https://maps.googleapis.com/maps/api/place/
-      key: AIzaSyCm-1Aopq9QMUd--8E0Rxuue-iHhjYTjqQ
-      timeout: 2000
+    places:
+        api:
+            url: https://maps.googleapis.com/maps/api/place/
+            key: AIzaSyCm-1Aopq9QMUd--8E0Rxuue-iHhjYTjqQ
+            timeout: 2000
