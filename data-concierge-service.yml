@@ -14,10 +14,12 @@ spring:
                     destination: data-concierge
                     group: data-concierge-group
                     durableSubscription: true
-    datasource:
+    cache: 
+        type: hazelcast
+    datasource: 
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:file:./target/h2db/db/data-concierge;DB_CLOSE_DELAY=-1
-        username: 
+        username: sa
         password:
     h2:
         console:
