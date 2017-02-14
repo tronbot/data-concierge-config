@@ -44,5 +44,5 @@ google:
     places:
         api:
             url: https://maps.googleapis.com/maps/api/place/
-            key: AIzaSyCm-1Aopq9QMUd--8E0Rxuue-iHhjYTjqQ
+            key: AIzaSyCzR2RLfJp-fF1Ui0tPRwKXLNWTDXDUu3E
             timeout: 2000
