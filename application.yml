@@ -59,7 +59,7 @@ logging:
     level:
         ROOT: INFO
         io.tronbot: DEBUG
-        org.hibernate.engine.internal: WARM
+        org.hibernate.engine.internal: WARN
 
 ##logging
 #logging.level.io.tronbot=DEBUG
