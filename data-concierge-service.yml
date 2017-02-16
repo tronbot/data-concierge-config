@@ -14,6 +14,8 @@ spring:
                     destination: data-concierge
                     group: data-concierge-group
                     durableSubscription: true
+                output:
+                    destination: data-concierge
     cache: 
         type: hazelcast
     datasource: 
