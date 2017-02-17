@@ -1,5 +1,5 @@
 server:
-	port: ${PORT:9999}
+  port: ${PORT:9999}
 
 spring:
     application:
@@ -13,14 +13,13 @@ spring:
                 output:
                     destination: data-concierge
 
-
 ## Disable Hystrix timeout globally (for all services)
 hystrix: 
-	command: 
-		default:
-			execution:
-				timeout:
-					enabled: false
+  command: 
+    default:
+      execution:
+        timeout:
+          enabled: false
 #
 ## Disable Hystrix timeout for a single service
 #hystrix.command.<serviceName>.execution.timeout.enabled: false

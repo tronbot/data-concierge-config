@@ -1,0 +1,18 @@
+server:
+    port: ${PORT:7000}
+
+spring:
+    application:
+        name: data-concierge-pipeline
+    profiles:
+        active: dev
+        include: swagger
+    cloud:
+        stream:
+            bindings:
+                input:
+                    destination: data-concierge
+                    group: data-concierge-group
+                    durableSubscription: true
+                output:
+                    destination: data-concierge
