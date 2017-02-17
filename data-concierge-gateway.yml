@@ -1,10 +1,26 @@
-server.port=${PORT:9999}
+server:
+	port: ${PORT:9999}
 
-spring.cloud.stream.bindings.output.destination=data-concierge
+spring:
+    application:
+        name: data-concierge-gateway
+    profiles:
+        active: dev
+        include: swagger
+    cloud:
+        stream:
+            bindings:
+                output:
+                    destination: data-concierge
 
 
 ## Disable Hystrix timeout globally (for all services)
-hystrix.command.default.execution.timeout.enabled: false
+hystrix: 
+	command: 
+		default:
+			execution:
+				timeout:
+					enabled: false
 #
 ## Disable Hystrix timeout for a single service
 #hystrix.command.<serviceName>.execution.timeout.enabled: false
