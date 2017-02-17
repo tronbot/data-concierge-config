@@ -48,3 +48,6 @@ google:
             url: https://maps.googleapis.com/maps/api/place/
             key: AIzaSyCzR2RLfJp-fF1Ui0tPRwKXLNWTDXDUu3E
             timeout: 2000
+npiregistry: 
+    api:
+        url: https://npiregistry.cms.hhs.gov
