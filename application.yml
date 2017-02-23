@@ -55,7 +55,11 @@ management:
             enabled: false # When using the MailService, configure an SMTP server and set this to true
         binders:
             enabled: true
+            
+            
 logging:
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
     level:
         ROOT: INFO
         io.tronbot: DEBUG
