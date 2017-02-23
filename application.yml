@@ -58,8 +58,6 @@ management:
             
             
 logging:
-    pattern:
-      console: "%d %-5level %logger : %msg%n"
     level:
         ROOT: INFO
         io.tronbot: DEBUG
