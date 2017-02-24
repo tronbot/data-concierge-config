@@ -61,6 +61,13 @@ logging:
     level:
         ROOT: INFO
         io.tronbot: DEBUG
+        
+data-concierge: 
+    async:
+        core-pool-size: 2
+        max-pool-size: 50
+        queue-capacity: 100000
+  
 
 ##logging
 #logging.level.io.tronbot=DEBUG
