@@ -67,6 +67,14 @@ data-concierge:
         core-pool-size: 2
         max-pool-size: 50
         queue-capacity: 100000
+    cache:
+        hazelcast: 
+            port: 5701
+            backup-Count: 1
+            write-batch-size: 10000
+            write-delay: 60
+            time-to-live-seconds: 12004800
+            
   
 
 ##logging
