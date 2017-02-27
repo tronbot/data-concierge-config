@@ -44,9 +44,12 @@ spring:
             hibernate.cache.hazelcast.use_lite_member: true
             
 google:
+    maps:
+        api:
+            url: https://maps.googleapis.com/maps/api/
+            key: AIzaSyDtjzZV79yvZeVKaXiLQghUvIBaWLnYZeY
     places:
         api:
-            url: https://maps.googleapis.com/maps/api/place/
             key: AIzaSyCzR2RLfJp-fF1Ui0tPRwKXLNWTDXDUu3E
             timeout: 2000
 npiregistry: 
