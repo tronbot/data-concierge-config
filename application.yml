@@ -32,6 +32,8 @@ eureka:
         statusPageUrlPath: ${management.context-path}/info
         healthCheckUrlPath: ${management.context-path}/health
 ribbon:
+    ReadTimeout: 30000
+    ConnectTimeout: 30000 
     eureka:
         enabled: true
 zuul:
