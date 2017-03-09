@@ -5,3 +5,4 @@ eureka:
     register-with-eureka: false 
     fetch-registry: false
 #eureka.client.enabled=false
+testValue: master
