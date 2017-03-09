@@ -4,9 +4,6 @@ server:
 spring:
     application:
         name: data-concierge-service
-    profiles:
-        active: dev
-        include: swagger
     cloud:
         stream:
             bindings:
