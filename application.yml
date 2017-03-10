@@ -3,8 +3,8 @@ spring:
         stream:
             kafka:
                 binder:
-                    brokers: chp-bmboagt01:9092
-                    zk-nodes: chp-bmboagt01:2181
+                    brokers: kafkanetes-kafka-messaging.192.168.62.185.xip.io:9092
+                    zk-nodes: kafkanetes-zk-messaging.192.168.62.185.xip.io:2181
     jackson:
         serialization.write_dates_as_timestamps: false
     jpa:
