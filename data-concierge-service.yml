@@ -8,11 +8,11 @@ spring:
         stream:
             bindings:
                 input:
-                    destination: data-concierge
+                    destination: data-concierge-openshift-dev
                     group: data-concierge-group
                     durableSubscription: true
                 output:
-                    destination: data-concierge
+                    destination: data-concierge-openshift-dev
     cache: 
         type: hazelcast
     datasource: 
