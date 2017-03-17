@@ -8,7 +8,7 @@ spring:
         stream:
             bindings:
                 output:
-                    destination: data-concierge
+                    destination: data-concierge-dev
 
 ## Disable Hystrix timeout globally (for all services)
 hystrix: 
