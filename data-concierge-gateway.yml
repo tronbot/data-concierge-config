@@ -4,11 +4,6 @@ server:
 spring:
     application:
         name: data-concierge-gateway
-    cloud:
-        stream:
-            bindings:
-                output:
-                    destination: data-concierge-dev
 
 ## Disable Hystrix timeout globally (for all services)
 hystrix: 
@@ -17,24 +12,3 @@ hystrix:
       execution:
         timeout:
           enabled: false
-#
-## Disable Hystrix timeout for a single service
-#hystrix.command.<serviceName>.execution.timeout.enabled: false
-
-# Increase the Hystrix timeout to 60s (globally)
-#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
-
-## Increase the Hystrix timeout to 60s (per service)
-#hystrix.command.<serviceName>.execution.isolation.thread.timeoutInMilliseconds: 60000
-#security.oauth2.resource.userInfoUri=http://localhost:9191/uaa/user
-
-#hystrix.command.default.execution.isolation.strategy=SEMAPHORE
-
-#
-# security.oauth2.client.client-secret=36f1653c889f3cc466519aa873188c33adfd53d4
-# security.oauth2.client.client-id=644c5dd8451bad01a627
-# security.oauth2.client.user-authorization-uri=https://github.com/login/oauth/authorize
-# security.oauth2.client.access-token-uri=https://github.com/login/oauth/access_token
-# security.oauth2.client.client-authentication-scheme=form
-# security.oauth2.resource.user-info-uri=https://api.github.com/user
-# security.oauth2.resource.prefer-token-info=false
