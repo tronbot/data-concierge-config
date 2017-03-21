@@ -41,14 +41,17 @@ spring:
             hibernate.cache.hazelcast.use_lite_member: true
             
 google:
-    maps:
-        api:
-            url: https://maps.googleapis.com/maps/api/
-            key: AIzaSyDtjzZV79yvZeVKaXiLQghUvIBaWLnYZeY
-    places:
-        api:
-            key: AIzaSyCzR2RLfJp-fF1Ui0tPRwKXLNWTDXDUu3E
-            timeout: 2000
+    api:
+        url: https://maps.googleapis.com/maps/api/
+        connectTimeoutMillis: 2000
+        readTimeoutMillis: 5000
+        keys:
+          place: AIzaSyCzR2RLfJp-fF1Ui0tPRwKXLNWTDXDUu3E
+          distance: AIzaSyDtjzZV79yvZeVKaXiLQghUvIBaWLnYZeY
+          geocode:
+    
 npiregistry: 
     api:
         url: https://npiregistry.cms.hhs.gov
+        connectTimeoutMillis: 5000
+        readTimeoutMillis: 10000
